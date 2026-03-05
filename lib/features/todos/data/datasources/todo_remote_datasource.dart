@@ -20,7 +20,6 @@ class TodoRemoteDataSource {
   }
 
   Future<TodoModel> addTodo(String title) async {
-    // JSONPlaceholder não cria de verdade, mas responde com um id
     final uri = Uri.parse('https://jsonplaceholder.typicode.com/todos');
     final res = await _client.post(
       uri,
